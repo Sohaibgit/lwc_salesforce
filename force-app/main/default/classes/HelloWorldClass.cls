@@ -4,6 +4,7 @@ public class HelloWorldClass {
         System.debug('Hello World');
         System.debug('This is for git testing');
         System.debug('Another line');
+        System.debug('Testing auto save and deploy to org');
     }
 
 }
