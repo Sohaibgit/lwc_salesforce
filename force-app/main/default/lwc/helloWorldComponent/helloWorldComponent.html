@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Data Binding Demo:">
+        <div class="slds-m-around_medium">
+            <lightning-input type="text" label="Enter your name here" onkeyup={changeNameHandler}></lightning-input>
+            <p><b>My name is:</b> {name}</p>
+        </div>
+    </lightning-card>
+    <br>
+    <lightning-card title="@track Property Demo:">
+        <div class="slds-m-around_medium">
+            <lightning-input type="text" label="Enter your city here" onkeyup={changeCityHandler}></lightning-input>
+            <p><b>My city is:</b> {address.city}</p>
+        </div>
+    </lightning-card>
+    <br>
+    <lightning-card title="Getter Demo:">
+        <div class="slds-m-around_medium">
+            <lightning-input type="number" label="Enter num1" onkeyup={assignNum1Handler}></lightning-input>
+            <lightning-input type="number" label="Enter num2" onkeyup={assignNum2Handler}></lightning-input>
+            <p><b>First User Name:</b> {firstUser}</p>
+            <p><b>Sum of {num1} and {num2} is:</b> {sumOfNumbers}</p>
+        </div>
+    </lightning-card>
+</template>
