@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="for:each loop directive:">
+        <div class="slds-m-around_medium">
+            <ul class="slds-list_dotted">
+                <template for:each={cars} for:item="car">
+                    <li key={car}>{car}</li>
+                </template>
+            </ul>
+        </div>
+    </lightning-card>
+    <br>
+    <lightning-card title="for:each loop with array of objects:">
+        <div class="slds-m-around_medium">
+            <ul class="slds-list_dotted">
+                <template for:each={ceoList} for:item="ceo">
+                    <li key={ceo.id}>
+                        <strong>{ceo.company}</strong> {ceo.name}
+                    </li>
+                </template>
+            </ul>
+        </div>
+    </lightning-card>
+</template>
