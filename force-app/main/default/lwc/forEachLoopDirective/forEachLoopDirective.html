@@ -20,4 +20,31 @@
             </ul>
         </div>
     </lightning-card>
+    <br>
+    <lightning-card title="iterator loop:">
+        <div class="slds-m-around_medium">
+            <ul class="slds-list_dotted">
+                <template iterator:ceo={ceoList}>
+                    <!-- First Iteration -->
+                    <template if:true={ceo.first}>
+                        <div key={ceo.value.id}>
+                            <strong>This is first iteration</strong>
+                        </div>
+                    </template>
+
+
+                    <li key={ceo.value.id}>
+                        <strong>{ceo.value.company}</strong> {ceo.value.name}
+                    </li>
+
+                    <!-- Last Iteration -->
+                    <template if:true={ceo.last}>
+                        <div key={ceo.value.id}>
+                            <strong>This is last iteration</strong>
+                        </div>
+                    </template>
+                </template>
+            </ul>
+        </div>
+    </lightning-card>
 </template>
